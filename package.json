@@ -1,0 +1,39 @@
+{
+	"name": "aceqes_zadanie",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "PORT=3001 node ./src/index.js",
+		"test": "PORT=3001 node ./__tests__/index.js",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"lint:fix": "npm run lint -- --fix",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+		"check": "tsc -p ./jsconfig.json",
+		"chech:watch": "npm run check -- --watch",
+		"jsdoc:build": "typedoc --tsconfig jsconfig.json --options jsdoc.config.js"
+	},
+	"keywords": [
+		"ACEQES",
+		"zadanie"
+	],
+	"author": "Mlocik97",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.14.2",
+		"eslint": "^9.4.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"jsdoc": "^4.0.3",
+		"prettier": "^3.3.2",
+		"typedoc": "^0.25.13",
+		"typescript": "^5.4.5",
+		"uvu": "^0.5.6"
+	},
+	"dependencies": {
+		"argon2": "^0.40.3",
+		"cookie-parser": "^1.4.6",
+		"express": "^4.19.2"
+	},
+	"type": "module"
+}
